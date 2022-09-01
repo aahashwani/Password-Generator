@@ -14,7 +14,8 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  /* background-color: linear-gradient (blue, pink); */
+  background-image: linear-gradient(to right, lightblue , pink , lightyellow);
 }
 
 .wrapper {
