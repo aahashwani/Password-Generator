@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var passwordLength = 8;
+var passwordLength = [];
 var pswChoice = []
 
 var upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
@@ -18,7 +18,7 @@ function generatePassword() {
   return password;
 }
 
-function getPrompts(){
+function passwordData(){
   pswChoice = [];
 
   passwordLength = parseInt(prompt('Please choose a password between 8 to 128 in length'));
@@ -49,16 +49,16 @@ function getPrompts(){
 
 // Write password to the #password input
 function writePassword() {
-  var correctPrompts = getPrompts();
+  var correctPrompts = passwordData();
   // var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordCreated = document.querySelector("#password");
   
   if (correctPrompts) {
     var newPassword = generatePassword();
-    passwordText.value = newPassword;
+    passwordCreated.value = newPassword;
 }
 else {
-  passwordText.value = "";
+  passwordCreated.value = "";
 }
 
 }
